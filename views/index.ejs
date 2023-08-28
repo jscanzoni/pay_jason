@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pay Jason</title>
+        <link rel="stylesheet" type="text/css" href="/styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <% paymentMethods.forEach((method) => { %>
+            <div class="card">
+                <img class="logo" src="<%= method.logo %>"
+                    alt="<%= method.label %> Logo">
+                <a class="link" href="<%= method.link %>"><%= method.label %></a>
+                <img class="qr" src="<%= method.qrDataURL %>"
+                    alt="<%= method.label %> QR Code">
+            </div>
+            <% }) %>
+        </div>
+    </body>
+</html>
